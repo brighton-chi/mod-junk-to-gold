@@ -51,8 +51,8 @@ public:
         LOG_DEBUG("junktogold", "Loaded {} skipped item IDs.", skipItemsID.size());
     }
 
-	void OnLootItem(Player* player, Item* item, uint32 count, ObjectGuid lootguid) override;
-	void OnQuestRewardItem(Player* player, Item* item, uint32 count) override;
+	void OnPlayerLootItem(Player* player, Item* item, uint32 count, ObjectGuid lootguid) override;
+	void OnPlayerQuestRewardItem(Player* player, Item* item, uint32 count) override;
 
 private:
     bool IsQuestItem(Player* player, Item* item);

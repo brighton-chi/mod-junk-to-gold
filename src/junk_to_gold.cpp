@@ -1,6 +1,6 @@
 #include "junk_to_gold.h"
 
-void JunkToGold::OnLootItem(Player* player, Item* item, uint32 count, ObjectGuid /*lootguid*/)
+void JunkToGold::OnPlayerLootItem(Player* player, Item* item, uint32 count, ObjectGuid /*lootguid*/)
 {
     if(IsEnabled)
     {
@@ -17,7 +17,7 @@ void JunkToGold::OnLootItem(Player* player, Item* item, uint32 count, ObjectGuid
     }
 }
 
-void JunkToGold::OnQuestRewardItem(Player* player, Item* item, uint32 count)
+void JunkToGold::OnPlayerQuestRewardItem(Player* player, Item* item, uint32 count)
 {
     if(IsEnabled)
     {
